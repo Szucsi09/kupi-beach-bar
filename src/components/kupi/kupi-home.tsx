@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useReveal } from "@/hooks/use-reveal";
+import { useHeroParallax } from "@/hooks/use-hero-parallax";
 import { Logo } from "@/components/kupi/logo";
 
 const WavePath = () => (
@@ -54,6 +55,7 @@ const MenuDishFlip = ({ image, alt, title, desc, ingredients }: MenuDishFlipProp
 
 export const KupiHome = () => {
   useReveal();
+  const { heroRef, imageStyle } = useHeroParallax();
 
   return (
     <>
@@ -95,7 +97,7 @@ export const KupiHome = () => {
 
       <span id="top" />
 
-      <section className="hero wood-bg" data-screen-label="Hero">
+      <section ref={heroRef} className="hero wood-bg" data-screen-label="Hero">
         <div className="wrap hero-grid">
           <div className="hero-copy reveal">
             <span className="eyebrow on-turq">Strand · Tó · Friss konyha</span>
@@ -116,15 +118,17 @@ export const KupiHome = () => {
             </a>
           </div>
           <div className="hero-art reveal">
-            <div className="hero-ph">
-              <Image
-                src="/images/kupiBB9.jpg"
-                alt="A türkiz KuPi Beach Bar faház a tó partján"
-                width={600}
-                height={600}
-                priority
-                className="h-full w-full object-cover"
-              />
+            <div className="hero-ph hero-parallax-container">
+              <div className="hero-parallax-image" style={imageStyle}>
+                <Image
+                  src="/images/kupiBB9.jpg"
+                  alt="A türkiz KuPi Beach Bar faház a tó partján"
+                  width={600}
+                  height={600}
+                  priority
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
             <div className="hero-badge">
               <span className="big">Friss</span>
@@ -594,7 +598,7 @@ const AudienceCard = ({
       <h3>{title}</h3>
       <p>{text}</p>
       <a href="#menu" className="textlink">
-        {linkLabel} <span className="arrow">→</span>
+        {linkLabel} <span className="arrow">��</span>
       </a>
     </div>
   </div>

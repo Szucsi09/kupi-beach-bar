@@ -201,13 +201,30 @@
   .hero-art{position:relative}
   .hero-ph{
     aspect-ratio:1/1;border-radius:50% 50% 48% 52% / 52% 48% 52% 48%;
-    box-shadow:0 50px 100px -30px rgba(10,74,78,.55);overflow:hidden;
-    transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+    box-shadow:0 50px 100px -30px rgba(42,74,77,.35);overflow:hidden;
+    transition:box-shadow .5s var(--ease);
   }
   .hero-ph:hover{
-    transform:scale(1.02) rotate(1deg);
-    box-shadow:0 60px 120px -30px rgba(10,74,78,.6);
+    box-shadow:0 60px 120px -30px rgba(42,74,77,.4);
   }
+  
+  /* Hero Parallax Zoom Effect */
+  .hero-parallax-container{
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-parallax-image{
+    width:100%;height:100%;
+    will-change:transform;
+    transition:transform 0.1s linear;
+  }
+  .hero-parallax-image img{
+    width:100%;height:100%;object-fit:cover;display:block;
+  }
+  @media (prefers-reduced-motion:reduce){
+    .hero-parallax-image{transform:none !important}
+  }
+  
   .hero-ph img{width:100%;height:100%;object-fit:cover;display:block}
   .hero-badge{
     position:absolute;bottom:6%;left:-6%;background:var(--lime);color:var(--turq-deep);
