@@ -6,19 +6,19 @@
 }
 
 :root{
-    --turq:#34ccd7;
-    --turq-deep:#0a4a4e;
-    --turq-dark:#1faab5;
-    --white:#ffffff;
-    --lime:#bbdd1e;
-    --lime-dark:#a5c40f;
-    --lime-glow:#d4f23a;
-    --sand:#f7f5f0;
-    --ink:#0a4a4e;
-    --ink-soft:#3a6d70;
-    --line:rgba(10,74,78,.12);
-    --shadow:0 24px 60px -20px rgba(10,74,78,.35);
-    --shadow-lg:0 32px 80px -24px rgba(10,74,78,.45);
+    --turq:#4eb8c0;
+    --turq-deep:#1a5a5e;
+    --turq-dark:#3a9da6;
+    --white:#fafafa;
+    --lime:#c4d94a;
+    --lime-dark:#a8bf3a;
+    --lime-glow:#d6e66a;
+    --sand:#f5f3ee;
+    --ink:#2a4a4d;
+    --ink-soft:#5a7a7d;
+    --line:rgba(42,74,77,.10);
+    --shadow:0 24px 60px -20px rgba(42,74,77,.22);
+    --shadow-lg:0 32px 80px -24px rgba(42,74,77,.28);
     --maxw:1220px;
     --ease:cubic-bezier(.22,.61,.36,1);
     --ease-bounce:cubic-bezier(.34,1.56,.64,1);
@@ -92,19 +92,19 @@
   .btn:hover::before{opacity:1}
   .btn-lime{
     background:var(--lime);color:var(--turq-deep);
-    box-shadow:0 12px 28px -10px rgba(165,196,15,.75),inset 0 1px 0 rgba(255,255,255,.3);
+    box-shadow:0 12px 28px -10px rgba(168,191,58,.55),inset 0 1px 0 rgba(255,255,255,.25);
   }
   .btn-lime:hover{
     background:var(--lime-dark);
     transform:translateY(-4px) scale(1.02);
-    box-shadow:0 20px 40px -14px rgba(165,196,15,.85),inset 0 1px 0 rgba(255,255,255,.3);
+    box-shadow:0 20px 40px -14px rgba(168,191,58,.6),inset 0 1px 0 rgba(255,255,255,.25);
     animation:limePulse 1.5s ease-in-out infinite;
   }
   .btn-lime:active{transform:translateY(-2px) scale(1)}
   @keyframes limePulse{
-    0%{box-shadow:0 16px 32px -12px rgba(165,196,15,.8),0 0 0 0 rgba(187,221,30,.6)}
-    70%{box-shadow:0 20px 40px -14px rgba(165,196,15,.85),0 0 0 20px rgba(187,221,30,0)}
-    100%{box-shadow:0 16px 32px -12px rgba(165,196,15,.8),0 0 0 0 rgba(187,221,30,0)}
+    0%{box-shadow:0 16px 32px -12px rgba(168,191,58,.5),0 0 0 0 rgba(196,217,74,.4)}
+    70%{box-shadow:0 20px 40px -14px rgba(168,191,58,.55),0 0 0 16px rgba(196,217,74,0)}
+    100%{box-shadow:0 16px 32px -12px rgba(168,191,58,.5),0 0 0 0 rgba(196,217,74,0)}
   }
   @media (prefers-reduced-motion:reduce){.btn-lime:hover{animation:none}}
   .btn .arrow{transition:transform .3s var(--ease-bounce)}
@@ -159,10 +159,10 @@
     transition:box-shadow .35s var(--ease),background .35s var(--ease),backdrop-filter .35s var(--ease);
   }
   header.nav.scrolled{
-    background:rgba(255,255,255,.85);
-    -webkit-backdrop-filter:saturate(180%) blur(16px);
-    backdrop-filter:saturate(180%) blur(16px);
-    box-shadow:0 8px 32px -12px rgba(10,74,78,.35);
+    background:rgba(250,250,250,.92);
+    -webkit-backdrop-filter:saturate(160%) blur(16px);
+    backdrop-filter:saturate(160%) blur(16px);
+    box-shadow:0 8px 32px -12px rgba(42,74,77,.18);
   }
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:88px}
   .nav-links{display:flex;align-items:center;gap:40px}
@@ -186,7 +186,7 @@
   .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
   .hero h1{
     font-size:clamp(76px,8vw,108px);color:var(--white);
-    text-shadow:0 6px 40px rgba(10,74,78,.25);letter-spacing:-1px;
+    text-shadow:0 6px 40px rgba(42,74,77,.18);letter-spacing:-1px;
   }
   .hero-title .word{
     display:inline-block;margin-right:.28em;opacity:0;transform:translateY(40px);
@@ -334,7 +334,7 @@
     position:relative;
   }
   .dish:hover .dish-flip-container{
-    box-shadow:0 28px 56px -20px rgba(10,40,42,.65);
+    box-shadow:0 28px 56px -20px rgba(42,74,77,.35);
   }
   .dish-flip-inner{
     position:relative;width:100%;height:100%;
@@ -351,11 +351,11 @@
     -webkit-backface-visibility:hidden;
   }
   .dish-flip-front{
-    background:#f5f5f5;
+    background:#f8f8f6;
   }
   .dish-flip-back{
     transform:rotateY(180deg);
-    background:linear-gradient(135deg,#f0f9fa 0%,#e8f7f9 100%);
+    background:linear-gradient(135deg,#f5f9f9 0%,#eef5f5 100%);
     display:flex;align-items:center;justify-content:center;padding:24px;
   }
   .dish-back-content{
