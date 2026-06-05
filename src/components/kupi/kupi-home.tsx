@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { useReveal } from "@/hooks/use-reveal";
 import { Logo } from "@/components/kupi/logo";
 
@@ -10,6 +11,46 @@ const WavePath = () => (
     d="M0,64 C240,120 480,8 720,40 C960,72 1200,120 1440,72 L1440,120 L0,120 Z"
   />
 );
+
+type MenuDishFlipProps = {
+  image: string;
+  alt: string;
+  title: string;
+  desc: string;
+  ingredients: string[];
+};
+
+const MenuDishFlip = ({ image, alt, title, desc, ingredients }: MenuDishFlipProps) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div className="dish reveal">
+      <div className="dish-flip-container" onClick={() => setIsFlipped(!isFlipped)}>
+        <div className={`dish-flip-inner ${isFlipped ? "flipped" : ""}`}>
+          <div className="dish-flip-front">
+            <div className="dish-img">
+              <Image src={image} alt={alt} width={400} height={400} className="h-full w-full object-cover" />
+            </div>
+          </div>
+          <div className="dish-flip-back">
+            <div className="dish-back-content">
+              <h4>{title}</h4>
+              <ul>
+                {ingredients.map((ingredient, idx) => (
+                  <li key={idx}>{ingredient}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>{title}</h3>
+        <p>{desc}</p>
+      </div>
+    </div>
+  );
+};
 
 export const KupiHome = () => {
   useReveal();
@@ -292,11 +333,18 @@ export const KupiHome = () => {
               title="Ázsiai csirke sliderek"
               desc="Ropogós csirke briós buciban, wokban sült rizzsel"
             />
-            <MenuDish
+            <MenuDishFlip
               image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grillezettPisztrang-Mn0fi0SVfAvNr4Skqw8eWGOz9tZepf.jpg"
               alt="Grillezett pisztráng sült krumplival és savanyú uborkával"
               title="Grillezett pisztráng"
               desc="Helyi tóból, citromos-kapros vajjal"
+              ingredients={[
+                "Friss pisztráng (helyi tóból)",
+                "Citromos-kapros vaj",
+                "Sült krumpli",
+                "Savanyú uborka",
+                "Friss citrom"
+              ]}
             />
             <MenuDish
               image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kertiSalata-PwKwkSaTRuauMfXotiZxdvx1KPrr2J.jpg"
