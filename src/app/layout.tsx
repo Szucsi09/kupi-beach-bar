@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="hu">
-      <body className={`${dmSans.variable} ${pacifico.variable}`}>
+    <html lang="hu" className="bg-white">
+      <body className={`${dmSans.variable} ${pacifico.variable} antialiased`}>
         {children}
       </body>
     </html>
