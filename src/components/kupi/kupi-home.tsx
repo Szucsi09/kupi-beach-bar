@@ -315,23 +315,45 @@ export const KupiHome = () => {
             </p>
           </div>
           <div className="menu-grid">
-            <MenuDish
+            <MenuDishFlip
               image="/images/kupiBB2.jpg"
               alt="Ropogós sült haltál sült krumplival"
               title="Ropogós haltál"
               desc="Friss sült hal, házi tartárral és sült krumplival"
+              ingredients={[
+                "Frissen sült hal",
+                "Házi tartármártás",
+                "Ropogós sült krumpli",
+                "Citromszelet",
+                "Friss saláta"
+              ]}
             />
-            <MenuDish
+            <MenuDishFlip
               image="/images/kupiBB8.jpg"
               alt="KuPi burger briós zsemlével és hasábburgonyával"
               title="KuPi burger"
               desc="Marhahús, érlelt sajt, házi brioche és ropogós saláta"
+              ingredients={[
+                "Házi marhahús pogácsa",
+                "Érlelt cheddar sajt",
+                "Házi brioche zsemle",
+                "Ropogós jégsaláta",
+                "Paradicsom és hagyma",
+                "Házi szósz"
+              ]}
             />
-            <MenuDish
+            <MenuDishFlip
               image="/images/kupiBB7.jpg"
               alt="Ázsiai csirke sliderek sült rizzsel"
               title="Ázsiai csirke sliderek"
               desc="Ropogós csirke briós buciban, wokban sült rizzsel"
+              ingredients={[
+                "Ropogós panírozott csirke",
+                "Mini briós buci",
+                "Wokban sült rizs",
+                "Ázsiai fűszerek",
+                "Friss zöldségek"
+              ]}
             />
             <MenuDishFlip
               image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grillezettPisztrang-Mn0fi0SVfAvNr4Skqw8eWGOz9tZepf.jpg"
@@ -346,17 +368,31 @@ export const KupiHome = () => {
                 "Friss citrom"
               ]}
             />
-            <MenuDish
+            <MenuDishFlip
               image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kertiSalata-PwKwkSaTRuauMfXotiZxdvx1KPrr2J.jpg"
               alt="Kerti saláta tál kecskesajttal és szezonális zöldségekkel"
               title="Kerti saláta tál"
               desc="Szezonális zöldségek, kecskesajttal és pirított maggal"
+              ingredients={[
+                "Szezonális zöldségek",
+                "Krémes kecskesajt",
+                "Pirított magvak",
+                "Friss rukkola",
+                "Házi vinaigrette"
+              ]}
             />
-            <MenuDish
+            <MenuDishFlip
               image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/limonade-LM9rJcnjCCfPGaQcHNqDCs052C9GOG.webp"
               alt="Házi limonádé friss citrommal és friss mentával"
               title="Házi limonádé"
               desc="Frissen facsart, napi készítés"
+              ingredients={[
+                "Frissen facsart citromlé",
+                "Tiszta forrásvíz",
+                "Nádcukor",
+                "Friss mentalevél",
+                "Jégkocka"
+              ]}
             />
           </div>
           <div className="menu-foot reveal">
