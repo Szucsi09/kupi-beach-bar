@@ -329,8 +329,9 @@
   /* Flip card animation */
   .dish-flip-container{
     aspect-ratio:1/1;border-radius:28px;overflow:hidden;
-    cursor:pointer;perspective:1000px;
-    transition:box-shadow .4s var(--ease),transform .4s var(--ease);
+    cursor:pointer;perspective:1200px;
+    transition:box-shadow .4s var(--ease);
+    position:relative;
   }
   .dish:hover .dish-flip-container{
     box-shadow:0 28px 56px -20px rgba(10,40,42,.65);
@@ -339,6 +340,7 @@
     position:relative;width:100%;height:100%;
     transition:transform .6s var(--ease);
     transform-style:preserve-3d;
+    transform-origin:center center;
   }
   .dish-flip-inner.flipped{
     transform:rotateY(180deg);
@@ -346,26 +348,30 @@
   .dish-flip-front,.dish-flip-back{
     position:absolute;width:100%;height:100%;
     backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+  }
+  .dish-flip-front{
+    background:#f5f5f5;
   }
   .dish-flip-back{
     transform:rotateY(180deg);
-    background:linear-gradient(135deg,var(--turq-dark) 0%,var(--turq) 100%);
+    background:linear-gradient(135deg,#f0f9fa 0%,#e8f7f9 100%);
     display:flex;align-items:center;justify-content:center;padding:24px;
   }
   .dish-back-content{
-    width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:var(--white);
+    width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:var(--turq-deep);
   }
   .dish-back-content h4{
-    font-size:18px;font-weight:700;margin-bottom:16px;font-family:var(--font-pacifico),cursive;
+    font-size:18px;font-weight:700;margin-bottom:16px;font-family:var(--font-pacifico),cursive;color:var(--turq);
   }
   .dish-back-content ul{
-    list-style:none;text-align:left;font-size:13px;line-height:1.6;
+    list-style:none;text-align:left;font-size:13px;line-height:1.8;
   }
   .dish-back-content li{
-    padding:4px 0;position:relative;padding-left:16px;
+    padding:6px 0;position:relative;padding-left:18px;color:var(--ink-soft);
   }
   .dish-back-content li::before{
-    content:"•";position:absolute;left:0;
+    content:"•";position:absolute;left:0;color:var(--lime);font-weight:700;
   }
 
   .menu-foot{text-align:center;margin-top:64px}
