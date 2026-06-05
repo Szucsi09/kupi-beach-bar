@@ -435,26 +435,6 @@ export const KupiHome = () => {
         </div>
       </section>
 
-      <section className="final" data-screen-label="Záró CTA">
-        <div className="wrap reveal">
-          <div className="badge-top" aria-hidden>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-              <path d="M3 17c1.6 0 1.6 1.4 3.2 1.4S7.8 17 9.4 17s1.6 1.4 3.2 1.4S14.2 17 15.8 17s1.6 1.4 3.2 1.4" />
-              <path d="M5 12.5a7 7 0 0 1 14 0" />
-              <path d="M12 5.5V3" />
-            </svg>
-          </div>
-          <h2 className="display">Meglepődsz, mit lehet kapni a vízparton.</h2>
-          <p>
-            A KuPi Beach Bar vár — a menü kész, a hely megvan, csak te
-            hiányzol.
-          </p>
-          <a href="#menu" className="btn btn-lime">
-            Megnézem a menüt <span className="arrow">→</span>
-          </a>
-        </div>
-      </section>
-
       <footer data-screen-label="Footer">
         <div className="wrap">
           <div className="foot-grid">
