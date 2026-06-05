@@ -292,9 +292,24 @@ export const KupiHome = () => {
               title="Ázsiai csirke sliderek"
               desc="Ropogós csirke briós buciban, wokban sült rizzsel"
             />
-            <MenuDishPlaceholder title="Grillezett pisztráng" desc="Helyi tóból, citromos-kapros vajjal" />
-            <MenuDishPlaceholder title="Kerti saláta tál" desc="Szezonális zöldségek, kecskesajttal és pirított maggal" />
-            <MenuDishPlaceholder title="Házi limonádé" desc="Frissen facsart, napi készítés" />
+            <MenuDish
+              image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grillezettPisztrang-Mn0fi0SVfAvNr4Skqw8eWGOz9tZepf.jpg"
+              alt="Grillezett pisztráng sült krumplival és savanyú uborkával"
+              title="Grillezett pisztráng"
+              desc="Helyi tóból, citromos-kapros vajjal"
+            />
+            <MenuDish
+              image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kertiSalata-PwKwkSaTRuauMfXotiZxdvx1KPrr2J.jpg"
+              alt="Kerti saláta tál kecskesajttal és szezonális zöldségekkel"
+              title="Kerti saláta tál"
+              desc="Szezonális zöldségek, kecskesajttal és pirított maggal"
+            />
+            <MenuDish
+              image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/limonade-LM9rJcnjCCfPGaQcHNqDCs052C9GOG.webp"
+              alt="Házi limonádé friss citrommal és friss mentával"
+              title="Házi limonádé"
+              desc="Frissen facsart, napi készítés"
+            />
           </div>
           <div className="menu-foot reveal">
             <a href="#menu" className="textlink lime" style={{ fontSize: 17 }}>
